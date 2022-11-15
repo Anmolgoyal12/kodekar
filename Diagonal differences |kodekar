@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,i,j,primary=0,secondary=0,dif;
+    scanf("%d",&n);
+    int a[n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    for(i=0;i<n;i++)
+    {
+            primary+=a[i][i];
+          }
+            
+    for(i=0;i<n;i++)
+    {
+        secondary+=a[i][n-i-1];
+      }
+    dif=primary-secondary;
+    dif=abs(dif);
+    printf("%d",dif);
+     
+    return 0;
+    }
