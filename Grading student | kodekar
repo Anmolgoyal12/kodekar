@@ -1,0 +1,20 @@
+//import java.io.*;
+import java.util.*;
+//import java.text.*;
+//import java.math.*;
+//import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+  int n,grade,i;
+        Scanner in = new Scanner(System.in);
+        n = in.nextInt();
+        for(i= 0; i < n; i++){
+             grade = in.nextInt();
+            if (grade >= 38) {
+                if (grade%5 >= 3) grade = grade/5*5 + 5;
+            }
+            System.out.println(grade);
+        }
+    }
+}
